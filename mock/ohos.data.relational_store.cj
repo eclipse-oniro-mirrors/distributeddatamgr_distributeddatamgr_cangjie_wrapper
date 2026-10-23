@@ -263,6 +263,43 @@ public class RdbPredicates {
     syscap: "SystemCapability.DistributedDataManager.RelationalStore.Core"
 ]
 public class RdbStore {
+    /**
+     * Set RdbStore version. The version number must be an integer greater than 0.
+     * Obtains the RdbStore version.
+     * If the RdbStore is read-only, reading or setting the version fails with error code 14800030.
+     *
+     * @throws { BusinessException } 801 - Capability not supported.
+     * @throws { BusinessException } 14800000 - Inner error. This error code is reported if an
+     * internal error is thrown while obtaining or setting the RDB store version.
+     * Possible causes: The SQL statement fails to be executed; the internal state of the RDB
+     * store is abnormal; an API is used incorrectly; a system error (such as a null pointer,
+     * insufficient memory, unexpected restart of the data service, I/O error,
+     * IPC exception) occurs.
+     * @throws { BusinessException } 14800014 - The target instance is already closed.
+     * @throws { BusinessException } 14800015 - The database does not respond.
+     * @throws { BusinessException } 14800021 - SQLite: Generic error.
+     * @throws { BusinessException } 14800023 - SQLite: Access permission denied.
+     * @throws { BusinessException } 14800024 - SQLite: The database file is locked.
+     * @throws { BusinessException } 14800025 - SQLite: A table in the database is locked.
+     * @throws { BusinessException } 14800026 - SQLite: The database is out of memory.
+     * @throws { BusinessException } 14800027 - SQLite: Attempt to write a readonly database.
+     * @throws { BusinessException } 14800028 - SQLite: Some kind of disk I/O error occurred.
+     * @throws { BusinessException } 14800029 - SQLite: The database is full.
+     * @throws { BusinessException } 14800030 - SQLite: Unable to open the database file.
+     */
+    @!APILevel[
+        since: "26.1.0",
+        syscap: "SystemCapability.DistributedDataManager.RelationalStore.Core",
+        throwexception: true
+    ]
+    public mut prop version: Int32 {
+        get() {
+            return 0
+        }
+        set(v) {
+        }
+    }
+
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.DistributedDataManager.RelationalStore.Core",
