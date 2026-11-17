@@ -26,6 +26,8 @@
                 "data_share",
                 "hiviewdfx_cangjie_wrapper",
                 "kv_store",
+                "multimedia_cangjie_wrapper",
+                "pasteboard",
                 "preferences",
                 "relational_store"
             ]
@@ -37,9 +39,13 @@
                 "//foundation/distributeddatamgr/distributeddatamgr_cangjie_wrapper/ohos/data/preferences:ohos.data.preferences",
                 "//foundation/distributeddatamgr/distributeddatamgr_cangjie_wrapper/ohos/data/relational_store:ohos.data.relational_store",
                 "//foundation/distributeddatamgr/distributeddatamgr_cangjie_wrapper/ohos/data/values_bucket:ohos.data.values_bucket",
+                "//foundation/distributeddatamgr/distributeddatamgr_cangjie_wrapper/ohos/pasteboard:ohos.pasteboard",
                 "//foundation/distributeddatamgr/distributeddatamgr_cangjie_wrapper/kit/ArkData:kit.ArkData"
             ],
             "inner_kits": [
+                {
+                    "name": "//foundation/distributeddatamgr/distributeddatamgr_cangjie_wrapper/ohos/pasteboard:ohos.pasteboard"
+                },
                 {
                     "name": "//foundation/distributeddatamgr/distributeddatamgr_cangjie_wrapper/ohos/data/data_share_predicates:ohos.data.data_share_predicates"
                 },
