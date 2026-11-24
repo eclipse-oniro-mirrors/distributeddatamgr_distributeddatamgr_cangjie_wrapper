@@ -37,6 +37,7 @@ internal const ERR_CODE_INVALID_OBJECT: Int32 = -1
 
 internal const SHARE_OPTION_VALUE_INAPP: Int32 = 0
 internal const SHARE_OPTION_VALUE_LOCAL_DEVICE: Int32 = 1
+internal const SHARE_OPTION_VALUE_CROSS_DEVICE: Int32 = 2
 
 /**
  * MIME type of the HTML content.
@@ -449,7 +450,7 @@ func shareOptionFromValue(value: Int32): ShareOption {
     if (value == SHARE_OPTION_VALUE_INAPP) {
         return Inapp
     }
-    if (value == SHARE_OPTION_VALUE_LOCAL_DEVICE) {
+    if (value == SHARE_OPTION_VALUE_LOCAL_DEVICE || value == SHARE_OPTION_VALUE_CROSS_DEVICE) {
         return Localdevice
     }
     throw BusinessException(ERR_CODE_PARAMETER_ERROR, "Parameter error. Parameter verification failed.")
